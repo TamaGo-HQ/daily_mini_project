@@ -2,39 +2,36 @@ CC = gcc
 CFLAGS = -Wall -Wextra -std=c99 -g -O0 -Iinclude
 SRCDIR = src
 TESTDIR = tests
-EXAMPLEDIR = examples
-INCLUDEDIR = include
 
 # Source files
 SOURCES = $(SRCDIR)/circular_buffer.c
 OBJECTS = $(SOURCES:.c=.o)
 
-# Test executables
-TEST_BASIC = $(TESTDIR)/test_basic
-TESTS = $(TEST_BASIC)
+# Only the threadsafe test
+TEST_THREADSAFE = $(TESTDIR)/test_threadsafe
 
 # Default target
-all: $(TESTS)
+all: $(TEST_THREADSAFE)
 
 # Compile source files
 $(SRCDIR)/%.o: $(SRCDIR)/%.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-# Test executables
-$(TEST_BASIC): $(TESTDIR)/test_basic.c $(OBJECTS)
+# Test executable
+$(TEST_THREADSAFE): $(TESTDIR)/test_threadsafe.c $(OBJECTS)
 	$(CC) $(CFLAGS) $^ -o $@
 
-# Run tests
-test: $(TESTS)
-	@echo "Running tests..."
-	./$(TEST_BASIC)
+# Run the threadsafe test
+test: $(TEST_THREADSAFE)
+	@echo "Running threadsafe test..."
+	./$(TEST_THREADSAFE)
 
 # Clean build files
 clean:
-	rm -f $(SRCDIR)/*.o $(TESTS)
+	rm -f $(SRCDIR)/*.o $(TEST_THREADSAFE)
 
-# Check for memory leaks (requires valgrind)
-memcheck: $(TEST_BASIC)
-	valgrind --leak-check=full --show-leak-kinds=all ./$(TEST_BASIC)
+# Memory check using valgrind
+memcheck: $(TEST_THREADSAFE)
+	valgrind --leak-check=full --show-leak-kinds=all ./$(TEST_THREADSAFE)
 
 .PHONY: all test clean memcheck
