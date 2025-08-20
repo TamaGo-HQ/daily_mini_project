@@ -251,8 +251,7 @@ int main() {
     test_basic_functionality();
     test_multithreaded();
     
-    printf("\n🎉 All thread-safe tests passed!\n");
-    printf("Your circular buffer is ready for embedded systems!\n");
+    printf("\n All thread-safe tests passed!\n");
     
     return 0;
 }
