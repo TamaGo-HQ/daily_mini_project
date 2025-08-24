@@ -30,8 +30,6 @@ This project helped my understanding of:
 - **CHECK_BIT(value, position)** - Check if a bit is set (returns bit value)
 - **IS_BIT_SET(value, position)** - Check if a bit is set (returns 0 or 1)
 
-## 🚀 Quick Start
-
 ## 🛠️ Building and Testing
 
 ### Method 1: Using Makefile (Recommended)
@@ -134,16 +132,16 @@ SET_BIT(a + b, 2)  // Could expand incorrectly due to operator precedence
 **Solution**: Wrapped all macro parameters in parentheses.
 
 ### Challenge 2: Multi-statement Macros
-**Problem**: Creating macros with multiple statements that work in all contexts (if-else, loops).
+**Problem**: Creating macros with multiple statements that work in all contexts (if-else, loops).  
 **Solution**: Used the `do-while(0)` idiom to ensure proper semicolon handling.
 
 
 ### Challenge 4: Testing Strategy
-**Problem**: How to comprehensively test macros without a testing framework.
+**Problem**: How to comprehensively test macros without a testing framework.  
 **Solution**: Built a custom testing framework using macros, providing colored output and statistics.
 
 ### Challenge 5: Windows Development Environment
-**Problem**: Windows doesn't have `make` by default.
+**Problem**: Windows doesn't have `make` by default. 
 **Solution**: Provided multiple build options (Makefile, manual compilation, VS Code integration).
 
 ## 🔄 Future Enhancements
