@@ -55,7 +55,7 @@ gcc -Wall -Wextra -std=c99 -I./include tests/test_bit_ops.c -o test_bit_ops
 
 # Run tests
 ./test_bit_ops
-
+```
 ## Project Structure
 
 ```
