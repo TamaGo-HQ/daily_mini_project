@@ -141,8 +141,8 @@ SET_BIT(a + b, 2)  // Could expand incorrectly due to operator precedence
 **Solution**: Built a custom testing framework using macros, providing colored output and statistics.
 
 ### Challenge 5: Windows Development Environment
-**Problem**: Windows doesn't have `make` by default. 
-**Solution**: Provided multiple build options (Makefile, manual compilation, VS Code integration).
+**Problem**: Windows doesn't have `make` by default.   
+**Solution**: Installed Chocolatey than ran choco install make.
 
 ## 🔄 Future Enhancements
 
