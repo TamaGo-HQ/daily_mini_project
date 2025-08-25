@@ -21,7 +21,7 @@ This project helped my understanding of:
 - Comprehensive testing methodologies
 - Build system management (Makefiles)
 
-## 📋 Features
+## Features
 
 ### Basic Bit Operations
 - **SET_BIT(value, position)** - Set a specific bit to 1
@@ -30,7 +30,7 @@ This project helped my understanding of:
 - **CHECK_BIT(value, position)** - Check if a bit is set (returns bit value)
 - **IS_BIT_SET(value, position)** - Check if a bit is set (returns 0 or 1)
 
-## 🛠️ Building and Testing
+## Building and Testing
 
 ### Method 1: Using Makefile (Recommended)
 
@@ -97,7 +97,7 @@ Failed: 0
 Success Rate: 100.0%
 ```
 
-## 🎯 Key Technical Decisions
+## Key Technical Decisions
 
 ### Why Macros Over Functions?
 - **Performance**: Zero function call overhead - critical for embedded systems
@@ -121,7 +121,7 @@ Success Rate: 100.0%
 ```
 Used for multi-statement macros to ensure they behave like single statements in all contexts.
 
-## 🚧 Challenges Faced and Solutions
+## Challenges Faced and Solutions
 
 ### Challenge 1: Macro Parameter Safety
 **Problem**: Macro parameters can be expressions, leading to unexpected behavior.
@@ -144,7 +144,7 @@ SET_BIT(a + b, 2)  // Could expand incorrectly due to operator precedence
 **Problem**: Windows doesn't have `make` by default.   
 **Solution**: Installed Chocolatey than ran choco install make.
 
-## 🔄 Future Enhancements
+## Future Enhancements
 
 - Multibit manipulation Macros
 - Test in an Embedded Environment
