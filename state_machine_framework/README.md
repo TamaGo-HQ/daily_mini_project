@@ -1,4 +1,4 @@
-# 🔧 Bit Manipulation Library for Embedded Systems
+# State Machine Framework for Embedded Systems
 
 **Project 4  of 30** - *30 Days of C Programming for Embedded Systems*
 
