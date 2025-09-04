@@ -1,0 +1,3 @@
+[submodule "uart_simulator/circular_buffer_c"]
+	path = uart_simulator/circular_buffer_c
+	url = https://github.com/TamaGo-HQ/circular_buffer_c
